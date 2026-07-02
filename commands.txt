@@ -77,4 +77,34 @@ Useful Log Options:
 Adding Remote Existing Repo:
 git remote add origin <remote URL> 
 git branch -M main
-git push -u origin main/master
+git push -u origin main (send file from local to remote)
+
+9. Working with Remote
+
+To see the remote git link:
+git remote 
+git remote -v
+git remote show origin (to get more info about remote)
+git clone (get file from others repo.)
+git pull (get file from remote to local)
+
+
+10. Branching & Merging
+
+create new branch:
+git branch <branch name>
+
+show all branch:
+git branch
+
+change current(main) branch to new branch:
+git checkout <new branch>
+
+merge changes to main branch:
+git branch
+git checkout main
+git merge <new branch>
+
+push change to remote:
+git push
+
