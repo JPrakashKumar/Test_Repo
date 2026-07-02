@@ -1,0 +1,80 @@
+1. Configure Git with Username and Email
+$ git config --global user.name "Paul Philips"
+$ git config --global user.email paulphilips@email.com
+$ git config --list
+
+2. Creating Local Git Repo
+$ git init
+
+
+3. frequent used commands:
+Git status	To check for any change in the repo
+
+Git diff	To see the difference of current version with last committed version
+git diff --cached // highlight changes to commit in file
+
+Git pull	To fetch the latest files from remote repo
+
+Git add	To add the modified files in staging area
+
+Git commit	To add the changes in git repo
+
+Git push	To push the committed changes in Remote repo
+
+Git log	To see the old commits history 
+
+
+4. Adding Changes in the files:
+git add. // All files added
+git add <file name>
+
+5. Commit changes in the file:
+git commit
+git commit -m "message to display if any"
+
+
+6. Negative Cases
+
+If we made any change by mistake and save it
+
+Case1: To undo changes, get the last successful change 
+git restore . or filename (. mean all files)
+
+Case2: If we added the changes using git add then
+
+git restore --staged <file_path> # To unstage
+git restore <file_path> # To discard changes in the working directory
+
+Case3: Added changes to staging area (didn't commit) after this added more changes to file 
+//To get the staged changes 
+git restore --worktree index.html
+
+Case4: How about if we did commit also wrong files 
+git reset --soft HEAD^ (uncommit and keep the changes) 
+or git reset --soft "HEAD^"
+git reset --hard HEAD^ (uncommit and discard the changes)
+or git reset --hard "HEAD^"
+
+
+7. Logging in Git:
+
+Useful Log Options:
+
+  git log -p -2   (last two commit with diff)   
+  git log --stat (summary of changes)
+  git log --pretty=oneline
+  git log --pretty=format:"%h - %an, %ar : %s"   
+  git log -S function_name // show when added & other details
+  git log --grep="any keyword"  (search commit msg)
+  git log --since="2024-01-01"   
+  git log --until="2024-01-01"
+  git log --author="Paul"   
+  git log --no-merges
+
+
+8. Git HUB
+
+Adding Remote Existing Repo:
+git remote add origin <remote URL> 
+git branch -M main
+git push -u origin main/master
