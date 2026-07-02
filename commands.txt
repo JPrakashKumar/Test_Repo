@@ -33,6 +33,17 @@ git commit
 git commit -m "message to display if any"
 
 
+View files fron old version:
+git log
+git show <id>:file_path
+
+In case of large code:
+git checkout <id> --file_path/all file
+
+Move back to master version:
+git checkout master --*
+
+
 6. Negative Cases
 
 If we made any change by mistake and save it
@@ -108,3 +119,36 @@ git merge <new branch>
 push change to remote:
 git push
 
+11. Git Forking (copying repo)
+
+12. git ignore:
+create a file name .gitignore
+store files which we don't want to commit 
+
+13. Git Clean:
+git clean -n
+git clean -f
+
+14. Git Tags: used in place of version ID
+git tag -a <tag_name> -m " "
+git tag
+git log
+git show <tag_name>
+
+Old version tagging:
+git tag -a <tag_name> <version Id> -m " " 
+
+If forget to insert message:
+press i - insert
+press ESC
+SHIFT + : wq // quit & exit
+
+15. Delete Tag:
+git tag -d <tag_no>
+
+16. Mave tags to remote:
+git push origin <tag_name>
+git push origin --tags(for all tags together)
+
+17. In case in future,if you wanna give patch for current release
+git checkout -b version2 v2.0.0 (it will create new branch also)
